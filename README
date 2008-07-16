@@ -1,0 +1,27 @@
+*************************************
+*** THIS README IS OUT OF DATE!!! ***
+    We're working on a new one...
+*************************************
+
+README
+
+The PDF and DOC files are provided for convenience, if you're going to edit the book then please use the files out of the markdown folder.
+
+WRITING GUIDELINES
+
+To be written, although we know you need to use Latex.  The process currently being used is to write the source files for each chapter in latex format, under the tex folder, named after each chapter.  The 'getting_started_with_rails.tex' is the main document that includes all the others.
+
+SOURCE CODE
+
+Source code should be placed in a separate file under the code folder, and an include directive placed in the correct place in the chapter.  Like so:
+
+Source code file:
+./code/ch0101.rb
+
+To be placed in the book:
+\include{../code/tex/ch0101.tex}
+
+The source file should be run through source-highlight (http://www.gnu.org/software/src-highlite/source-highlight.html), and the results placed in ./code/tex so that the reader will benefit from the beautiful goodness of source highlighting.  This is ultimately more readable.
+Note: We only pull out the Ruby and HTML code.
+
+source-highlight --src-lang ruby --out-format latexcolor --input ch0105.rb --output tex/ch0105.tex

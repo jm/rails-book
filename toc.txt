@@ -1,0 +1,347 @@
+Practical Ruby on Rails
+
+Introduction
+
+"To suggest to the reader that they are going to get a book that has some sleeves-rolled up hard core real-use code"
+
+WHY DOES IT MATTER?  <- Our Mantra
+
+Part I - Introducing Ruby on Rails
+----------------------------------
+ 
+Chapter XX - A Quick Start to Rails
+
+  * Getting Up and Running, Quickly
+    * Installing Ruby
+    * Installing Ruby Gems
+    * Installing Gem Rails
+
+  * An Application Walk-Through
+    * Configuring Rails
+    * Creating the databases
+    * Generating the first Model
+    * Creating the first Migration
+    * Creating the initial schema with rake db:migrate
+    * Getting results quickly with scaffolding
+    * Starting the built-in web server
+    * Using Migrations to evolve the schema
+    * Generating the scaffolding
+    * Taking a look around
+
+Chapter XX - Rails Concepts
+
+  * A High-level View of Rails
+    ~ Rails is opinionated software
+    ~ Rails is agile
+    ~ Convention over configuration
+    ~ Don't Repeat Yourself (DRY)
+    ~ Model, View, Controller (MVC)
+
+  * Anatomy of a Rails Application
+    ~ What does the 'rails' command generate
+    ~ What goes where
+    ~ The 'app/' directory structure (models, views, controllers)
+    ~ Configuration files and directives
+    ~ Tests and where they live
+   
+  * A view of a Rails application from the browser
+    ~ The URL http://localhost:3000/controller/action/id (see config/routes.rb)
+    ~ Explain default route in routes.rb controller/:action/:id etc
+    ~ How controller actions relate to views (action: foo == view: foo)
+    ~ How views use the default layout
+    ~ Where do the static files (css, images, etc.) come from?
+
+Chapter XX - A Short Introduction to Ruby
+
+  * Objects, Variables, and Methods
+  * Classes
+  * Modules
+  * Variables
+    * Local variables vs. Instance variables
+    * Class variables
+      ~ String interpolation
+      ~ Naming conventions
+        ~ Classes are CamelCase; Methods are lower_case
+      ~ Instance methods and class methods
+      ~ Mixins and Inheritance
+      ~ Blocks
+      ~ method_missing 
+    
+
+Part II - Sleeves Rolled Up
+---------------------------
+
+Chapter XX - Active Record
+
+  * What is Object-Relational Modelling?
+  
+  * Getting started with Active Record 
+    ~ Creating a database connection
+    ~ Notable database naming conventions
+    ~ CRUD (Create, Read, Update, Delete)
+    ~ Using the console to inspect model objects
+    ~ Using Find
+    ~ Using Find with options
+    ~ Using Dynamic Finders
+    ~ Using SQL when necessary
+  
+  * Evolving your Schema with Migrations
+    ~ Creating and Updating tables
+    ~ Reversing a Migration
+    ~ Creating an IrreversibleMigration
+    ~ Using Migrations to manage data in your database
+  
+  * Modelling with Associations
+    ~ Creating basic associations/relations
+    ~ Creating a many-to-many relationship
+    ~ Polymorphic associations
+    ~ Self-referential Relationships
+    ~ Single Table Inheritance
+    ~ Eager-loading of Associations
+    ~ Creating records through Associations
+
+  * Validating your Models
+    ~ Using the built-in validation methods
+    ~ Validating with Regular Expressions
+    ~ Custom Validations
+
+  * Intervening in the Object Lifecycle
+    ~ Callback hooks
+    ~ Observers
+    ~ When to use Callbacks
+    
+  * Dealing with Transactions
+    ~ Using optimistic locking
+    ~ Using pessimistic locking
+  
+Chapter XX - Action Pack - Part I
+
+  * An Introduction to Action Pack
+    ~ Action Controllers
+    ~ Action Views
+    ~ Action View Helpers
+    ~ Routes
+    ~ Summary: The Action Pack Request Cycle
+
+  * A Controller Walkthrough
+    ~ Generating a Controller
+      ~ TIP: Modify files with Subversion
+    ~ Action Methods
+    ~ Automatic Template Rendering
+    ~ Views
+    ~ ERb
+      ~ Directives
+      ~ Expressions
+    ~ Layouts
+    ~ Partials
+    ~ Helpers
+    ~ Rendering and Redirecting
+  
+  * Summary: The Case for Controllers
+
+
+Chapter XX - Action Pack - Part II
+
+  * Controller Actions and Templates
+    ~ An Introduction to Embedded Ruby
+
+  * Layouts
+    ~ Creating content areas within a layout
+    ~ Using content_for to include a sidebar
+
+  * DRYing Views with partials
+    ~ Avoiding duplication with partial templates
+    ~ Rendering a collection of partials
+
+  * Working with html forms
+    ~ Providing and accessing form data
+    ~ Using the params Hash
+    ~ Creating forms for ActiveRecord objects
+    ~ Using a form builder
+    ~ Creating Postback-style controllers
+
+  * Using Helpers
+    ~ Linking to resources (URLS)
+    ~ Linking to stylesheets and javascripts
+    ~ Creating an autodiscovery RSS link
+    ~ Using text filters on your content
+    ~ Rolling your own helpers
+
+  * Alternate templating languages
+    ~ Building XML with builder templates
+    ~ Generating an RSS feed with Builder
+    ~ Writing markup as Ruby with Markaby
+    ~ Rolling your own template language
+  
+  * Request filters
+    ~ before_filter
+    ~ skip_before_filter
+    ~ prepend_before_filter
+    ~ around_filter
+    ~ verify
+ 
+  * Routing URLs
+    ~ How Requests are Routed
+    ~ Creating pretty URLs on the fly
+    ~ Using Named Routes
+    ~ Alternate default routes
+
+  * Sessions and Cookies
+    ~ Doing simple authentication
+    ~ Doing role based authentication
+    ~ Choosing a session store
+    ~ Using the Flash hash
+
+  * REST and simply_restful
+    ~ Creating a REST API
+    ~ Musings on CRUD
+
+Chapter XX - Javascript and AJAX
+
+  * What is AJAX?
+
+  * Scriptaculous effects
+    ~ Loading the javascript libraries (:defaults)
+    ~ Available effects and when to use them
+    ~ Using combination effects
+
+  * An Introduction to RJS Templates
+  * Adding and deleting without refreshing the browser
+    ~ Showing a progress indicator for long-running actions
+
+  * Highlighting areas to gain attention
+  * Creating a form with auto-complete
+  * Editing fields in place
+    ~ Editing text areas boxes in place
+
+  * Sorting a list with drag and drop
+    ~ acts_as_list
+
+  * Creating a live search
+  * Creating a live preview
+  * Making a live data grid
+  * Using Lightbox for funky effects
+  * Creating a dynamic shopping cart
+  * Finding your way with Google Maps and Cartographer
+  * Using alternate AJAX libraries
+
+Chapter XX - Sending and Receiving Mail with ActionMailer
+  
+  * Sending mail
+  * Receiving mail using Rails Mail plugin
+  * Sending batch mail
+  * Using mailer for subscription confirmations
+  * Customizing mailer templates
+
+Chapter XX - Testing
+ 
+  * What is Test Driven Design
+
+  * Unit Testing
+    ~ Testing your models
+    ~ Using fixtures for model testing
+    ~ Using mock objects to simulate behaviour
+
+  * Functional Testing
+    ~ Testing your controllers
+    ~ Testing your views with content_tag
+
+  * Integration Testing
+    ~ Testing with stories
+
+  * Testing RJS templates with ARTS
+  * Extending your test functions with helpers
+ 
+Chapter XX - Debugging
+ 
+  * Debugging Strategies and Methods
+  * Using the breakpointer
+  * The Logger is Your Friend
+  * Running your app interactively on the console
+  * Debug your ajax calls
+  * Find IE Memory Leaks?
+  * Using Firebug to debug Ajax 
+  * Configuring a custom Logger
+
+
+Chapter XX - Extending Rails with Plugins
+
+  * What are plugins ?
+  * Where are the plugins ?
+  * Installing plugins
+
+  * Writing your own plugins
+    ~ Anotomy of a Plugin
+    ~ the plugin generator
+
+  * Testing your plugins
+
+  * Sidebar of favorite plugins
+    ~ List our most used plugins
+
+Chapter XX - Finalizing
+
+  * Profiling and benchmarking your application
+  * Optimizing and Refactoring
+
+  * Different flavours of web server
+    ~ Getting to know Lighttpd
+    ~ Using Mongrel as an alternative
+
+  * Using Capistrano to deploy your app
+    ~ Capistrano recipes
+    ~ Working with database.yml and
+  * Deploying your application with Capistrano
+  * Deploying with Capistrano using linked folders
+
+Chapter XX Automation
+
+  * Writing your own Rake tasks
+  * Creating your own generators
+  * Integrating with subversion
+  * Generating models, controllers, scaffolds, mailers, and migrations
+  * Using Rake to manipulate your databases
+
+  
+------------------------------------------------------------------------
+  
+Appendix X - Installing the Rails Stack
+
+  * Installation on OS X
+  * Installation on Windows
+  * Installation on Unix
+
+Appendix X - Setting up a Development Environment 
+
+  * Choosing an editor and where are the IDE's ?
+  * Installing Textmate and using its full potential
+  * Installing and using RadRails
+  * Old school Vim and Emacs for RoR developers
+  * Getting started with Subversion and version control
+
+Appendix X - The Rails Community
+
+  * Introduction to the Rails Community (irc, mailing lists, weblogs)
+  * What is Edge Rails and how to install it
+  * How to create bug reports and patches for Edge Rails
+  * Finding documentation (api and annotated api)
+  * Running the Edge Rails tests
+
+Appendix X - Rails Architecture design
+
+  * Moving from Webrick to Mongrel
+  * Installing Lighttpd
+  * Your Rails hosting options: RailsMachine & EngineYard
+
+
+============================
+ 
+Notes to get integrated into chapters
+
+  ~ Testing your routes with the routes tester plugin
+  ~ Using flash to give the user messages
+  ~ Testing controllers (functional testing)
+  ~ Caching your controller actions
+  ~ Turn off caching during development
+  ~ Writing a fullblown Integration test to test your full application
+  ~ Generalizing actions in application.rb
